@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "04c944bd-6721-4699-978e-4719ed6b18ca",
+		"name": "Joc Daus-JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Nuevo usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"Joan\",\"nombreUsuario\":\"user\",\"email\":\"abcde\",\"password\":\"user\"}\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ0MjM2NzUzLCJleHAiOjE2NDQyNzI3NTN9.7Blvnv-q23IgDZLKf5bQjpsakuizmBS8bv27ec8bC8EAxknT5HpxZagCgIR1npqLAheyC8fl3ofi5nH-8FbeqQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombreUsuario\":\"user\",\"password\":\"user\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nuevo admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"admin\", \"nombreUsuario\":\"admin\", \"email\":\"a@admin.com\", \"password\":\"admin\", \"roles\":[\"admin\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ0MjM2NzUzLCJleHAiOjE2NDQyNzI3NTN9.7Blvnv-q23IgDZLKf5bQjpsakuizmBS8bv27ec8bC8EAxknT5HpxZagCgIR1npqLAheyC8fl3ofi5nH-8FbeqQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombreUsuario\":\"admin\",\"password\":\"admin\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Llistar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/llistar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"llistar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update nom",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Peter",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/jugador/updateJugador/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"updateJugador",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Jugador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Lluna\",\r\n    \"data_entrada\":\"2020-09-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/jugador/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tirada jugador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/1/tirades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"1",
+						"tirades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina tirada",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/3/tirades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"3",
+						"tirades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Percentatge exit jugadors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ranking jugadors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/ranking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Millor Jugador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxNzU3NCwiZXhwIjoxNjQ0MzUzNTc0fQ.9y4YN142y6sd8FJQj_qrDggpI2qB5hI6x_YG9xkchz4OzAyrM8wpz1KsjyigUUITFoJJNpx-qVDsPb4vlB6nWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/ranking/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pitjor Jugador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxODA5NCwiZXhwIjoxNjQ0MzU0MDk0fQ.EPa3H7E50hk_JDC8MgupOB2jPKMx_RnZfHQ5LCb1lrI2Y62mqonuVmkDKQIlnGo_H1Xw2PAsgCAXFDxGYJlb7Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/ranking/loser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Llistar Tirades",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDMxODA5NCwiZXhwIjoxNjQ0MzU0MDk0fQ.EPa3H7E50hk_JDC8MgupOB2jPKMx_RnZfHQ5LCb1lrI2Y62mqonuVmkDKQIlnGo_H1Xw2PAsgCAXFDxGYJlb7Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/1/llistarTirades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"1",
+						"llistarTirades"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
