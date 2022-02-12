@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "d07bd79c-310c-4e93-9054-b50e2505ec1b",
+		"name": "Joc Daus-Mongo&Mysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear jugador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_jugador\":\"null\",               \r\n    \"data_entrada\":\"2020-09-12\",\r\n    \"nom\":\"Sonia\",\r\n    \"tasa_exit\":\"null\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update nom jugador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Lily"
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateJugador/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateJugador",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Llistar jugadors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/llistar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"llistar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tirada Jugador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/2/tirades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"2",
+						"tirades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina tirada",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/1/tirades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"1",
+						"tirades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Percentatge exit jugadors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ranking jugadors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jugador/ranking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jugador",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Millor Jugador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ranking/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pitjor jugador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ranking/loser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Llistar tirades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/1/llistarTirades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1",
+						"llistarTirades"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
